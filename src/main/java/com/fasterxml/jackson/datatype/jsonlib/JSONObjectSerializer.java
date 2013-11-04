@@ -7,6 +7,7 @@ import java.util.Iterator;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
+import net.sf.json.util.JSONUtils;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -63,7 +64,7 @@ public class JSONObjectSerializer extends JSONBaseSerializer<JSONObject>
             } catch (JSONException e) {
                 throw new JsonGenerationException(e);
             }
-            if (ob == null) {
+            if (ob == null || JSONUtils.isNull(ob)) {
                 if (provider.isEnabled(SerializationFeature.WRITE_NULL_MAP_VALUES)) {
                     jgen.writeNullField(key);
                 }

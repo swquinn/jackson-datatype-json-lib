@@ -5,6 +5,7 @@ import java.lang.reflect.Type;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import net.sf.json.util.JSONUtils;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -53,7 +54,7 @@ public class JSONArraySerializer extends JSONBaseSerializer<JSONArray>
     {
         for (int i = 0, len = value.size(); i < len; ++i) {
             Object ob = value.opt(i);
-            if (ob == null) {
+            if (ob == null || JSONUtils.isNull(ob)) {
                 jgen.writeNull();
                 continue;
             }

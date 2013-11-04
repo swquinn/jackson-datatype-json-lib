@@ -3,6 +3,7 @@ package com.fasterxml.jackson.datatype.jsonlib;
 import java.io.IOException;
 
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -44,7 +45,7 @@ public class JSONArrayDeserializer extends StdDeserializer<JSONArray>
                 array.add(jp.getText());
                 continue;
             case VALUE_NULL:
-                array.add(null);
+                array.add(new JSONObject(true));
                 continue;
             case VALUE_TRUE:
                 array.add(Boolean.TRUE);

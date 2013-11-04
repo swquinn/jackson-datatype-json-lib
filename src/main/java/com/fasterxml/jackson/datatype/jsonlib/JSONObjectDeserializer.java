@@ -3,6 +3,7 @@ package com.fasterxml.jackson.datatype.jsonlib;
 import java.io.IOException;
 
 import net.sf.json.JSONException;
+import net.sf.json.JSONNull;
 import net.sf.json.JSONObject;
 
 import com.fasterxml.jackson.core.JsonParser;
@@ -46,7 +47,7 @@ public class JSONObjectDeserializer extends StdDeserializer<JSONObject>
                     ob.put(fieldName, jp.getText());
                     continue;
                 case VALUE_NULL:
-                    ob.put(fieldName, null);
+                    ob.put(fieldName, new JSONObject(true));
                     continue;
                 case VALUE_TRUE:
                     ob.put(fieldName, Boolean.TRUE);
