@@ -16,9 +16,9 @@
  */
 package @package@;
 
-import com.fasterxml.jackson.core.Version;
-import com.fasterxml.jackson.core.Versioned;
-import com.fasterxml.jackson.core.util.VersionUtil;
+import org.codehaus.jackson.Version;
+import org.codehaus.jackson.Versioned;
+import org.codehaus.jackson.util.VersionUtil;
 
 /**
  * Automatically generated from PackageVersion.java.in during
@@ -26,11 +26,11 @@ import com.fasterxml.jackson.core.util.VersionUtil;
  * pom.xml.
  */
 public final class PackageVersion implements Versioned {
-    public final static Version VERSION = VersionUtil.parseVersion(
-        "@projectversion@", "@projectgroupid@", "@projectartifactid@");
 
-    @Override
+    public final static Version VERSION = VersionUtil.parseVersion("@projectversion@");
+        
+	@Override
     public Version version() {
         return VERSION;
-    }
+    }    
 }

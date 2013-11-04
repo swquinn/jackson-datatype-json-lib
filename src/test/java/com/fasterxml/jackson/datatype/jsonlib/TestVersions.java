@@ -18,8 +18,8 @@ package com.fasterxml.jackson.datatype.jsonlib;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.core.Version;
-import com.fasterxml.jackson.core.Versioned;
+import org.codehaus.jackson.Version;
+import org.codehaus.jackson.Versioned;
 
 public class TestVersions extends TestBase
 {

@@ -19,14 +19,16 @@ package com.fasterxml.jackson.datatype.jsonlib;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-import com.fasterxml.jackson.databind.module.SimpleModule;
+import org.codehaus.jackson.Version;
+import org.codehaus.jackson.map.module.SimpleModule;
 
 public class JsonLibModule extends SimpleModule
 {
-    private static final long serialVersionUID = 1;
-
     private final static String NAME = "JsonLibModule";
-    
+
+    // Should externalize this somehow
+    private final static Version VERSION = new Version(1, 9, 2, null);
+
     /*
     /**********************************************************
     /* Life-cycle
@@ -35,6 +37,7 @@ public class JsonLibModule extends SimpleModule
     
     public JsonLibModule()
     {
+        //super(NAME, VERSION);
         super(NAME, PackageVersion.VERSION);
         addDeserializer(JSONArray.class, JSONArrayDeserializer.instance);
         addDeserializer(JSONObject.class, JSONObjectDeserializer.instance);

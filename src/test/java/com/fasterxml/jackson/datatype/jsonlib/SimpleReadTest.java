@@ -17,11 +17,10 @@
 package com.fasterxml.jackson.datatype.jsonlib;
 
 import net.sf.json.JSONArray;
-import net.sf.json.JSONNull;
 import net.sf.json.JSONObject;
 import net.sf.json.util.JSONUtils;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.codehaus.jackson.map.ObjectMapper;
 
 public class SimpleReadTest extends TestBase
 {

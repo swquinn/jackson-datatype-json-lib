@@ -16,9 +16,9 @@
  */
 package com.fasterxml.jackson.datatype.jsonlib;
 
-import com.fasterxml.jackson.databind.ser.std.StdSerializer;
+import org.codehaus.jackson.map.ser.std.SerializerBase;
 
-abstract class JSONBaseSerializer<T> extends StdSerializer<T>
+abstract class JSONBaseSerializer<T> extends SerializerBase<T>
 {
     protected JSONBaseSerializer(Class<T> cls) { super(cls); }
 }
