@@ -2,21 +2,21 @@ Project to build Jackson (http://jackson.codehaus.org) extension module (jar) to
 
 ## Status
 
-Module is fully usable and officially released; the initial version specifically targets Jackson 2.2.3 and is based off of the work done to support the [JSON.org](http://json.org/) library.
+Module is fully usable and officially released.
 
-Only Jackson 2.x is supported at this time.
+This project aims to ensure compatibility with Jackson versions in the 1.x release family, specifically targeting Jackson 1.9.2 for seamless integration with Hibernate 4 projects. It may also work with Jackson 1.8 and 1.7, but it is untested against those versions.
 
 ## Usage
 
 ### Maven dependency
 
-To use module (version 2.x) on Maven-based projects, use following dependency:
+To use module on Maven-based projects, use following dependency:
 
 ```xml
 <dependency>
   <groupId>com.fasterxml.jackson.datatype</groupId>
   <artifactId>jackson-datatype-json-lib</artifactId>
-  <version>2.2.3</version>
+  <version>1.9.2</version>
 </dependency>
 ```
 
