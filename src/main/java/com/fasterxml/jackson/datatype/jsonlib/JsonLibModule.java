@@ -26,13 +26,11 @@ public class JsonLibModule extends SimpleModule
     private static final long serialVersionUID = 1;
 
     private final static String NAME = "JsonLibModule";
-    
-    /*
-    /**********************************************************
-    /* Life-cycle
-    /**********************************************************
+
+    /**
+     * Constructor.
+     * @see com.fasterxml.jackson.databind.module.SimpleModule#SimpleModule()
      */
-    
     public JsonLibModule()
     {
         super(NAME, PackageVersion.VERSION);

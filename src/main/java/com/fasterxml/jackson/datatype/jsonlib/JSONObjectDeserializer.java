@@ -19,7 +19,6 @@ package com.fasterxml.jackson.datatype.jsonlib;
 import java.io.IOException;
 
 import net.sf.json.JSONException;
-import net.sf.json.JSONNull;
 import net.sf.json.JSONObject;
 
 import com.fasterxml.jackson.core.JsonParser;
