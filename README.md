@@ -1,10 +1,12 @@
-Project to build Jackson (http://jackson.codehaus.org) extension module (jar) to support datatypes of the "net.sf.json" JSON library (see [http://json-lib.sourceforge.net/])
+Project to build Jackson (http://jackson.codehaus.org) extension module (jar) to support datatypes of the "net.sf.json" JSON library (see http://json-lib.sourceforge.net/). Based largely off of the work done by FasterXML for [jackson-datatype-json-org](https://github.com/FasterXML/jackson-datatype-json-org) to support the [JSON.org](http://json.org/) library.
+
+This project largely was created to fill a need in another project where the JSON-Lib library was being used, and it wasn't feasible to convert to Jackson for everything. The package namespaces were kept as `com.fasterxml.jackson...` because it made the most sense.
 
 ## Status
 
-Module is fully usable and officially released; the initial version specifically targets Jackson 2.2.3 and is based off of the work done to support the [JSON.org](http://json.org/) library.
+This module is fully usable and officially released; there are two versions, one specifically targetting version `1.9.2` of the Jackson libraries (for seamless compatibility with Hibernate 4) and another release targetting Jackson 2.2.3 and beyond.
 
-Only Jackson 2.x is supported at this time.
+Any future development will focus of support for Jackson 2.x.
 
 ## Usage
 
