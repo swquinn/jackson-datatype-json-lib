@@ -1,3 +1,5 @@
+> **NOTICE:** This repository is no longer being actively maintained. Many of its dependencies are woefully out of date. If you use it and would like to issue pull requests to update its functionality or you are interested in taking ownership of the repository, please open an issue indicating as much.
+
 Project to build Jackson (http://jackson.codehaus.org) extension module (jar) to support datatypes of the "net.sf.json" JSON library (see http://json-lib.sourceforge.net/). Based largely off of the work done by FasterXML for [jackson-datatype-json-org](https://github.com/FasterXML/jackson-datatype-json-org) to support the [JSON.org](http://json.org/) library.
 
 This project largely was created to fill a need in another project where the JSON-Lib library was being used, and it wasn't feasible to convert to Jackson for everything. The package namespaces were kept as `com.fasterxml.jackson...` because it made the most sense.
